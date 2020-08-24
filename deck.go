@@ -22,6 +22,10 @@ func newDeck() deck {
 	return cards
 }
 
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
+}
+
 //   receiver
 //Any variable of type deck now gets access to the print method
 //d is the reference to the actual copy of the deck-type variable. In this case cards
