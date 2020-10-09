@@ -23,10 +23,10 @@ func main() {
 
 	for l := range c {
 		// Function Literal (anonymous function) Syntax -> func(){}()
-		go func() {
+		go func(link string) {
 			time.Sleep(2 * time.Second)
-			checkLink(l, c)
-		}()
+			checkLink(link, c)
+		}(l)
 	}
 }
 
